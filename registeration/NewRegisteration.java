@@ -1,10 +1,15 @@
 package registeration;
 
 import java.util.ArrayList;
-
+import java.util.List;
+/**
+ * THis is at class level.
+ * @author pankajy
+ *
+ */
 public  class NewRegisteration {
 
-	private  final ArrayList<Student> newStudent = new ArrayList<Student>();
+	private  final static List<Student> newStudent = new ArrayList<Student>();
 
 	public boolean addNewStudent(Student studentDetail) {
 		if(findStudent(studentDetail.getStudentRegisterationNumber()) >= 0) {
@@ -16,7 +21,11 @@ public  class NewRegisteration {
 		return true;
 	}
 
-
+/**
+ * This is doing something.
+ * @param registerationNumber
+ * @return
+ */
 	int findStudent(String registerationNumber) {
 
 
@@ -46,7 +55,7 @@ public  class NewRegisteration {
 			return true;			
 		}
 
-		System.out.println("Student with regiteration number: "+
+		System.out.println("Student with regiteration no: "+
 				regNumber +
 				"not found");
 		return false;

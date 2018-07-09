@@ -8,10 +8,11 @@ public class Main {
 	private static Scanner scanner  = new Scanner(System.in);
 	private static NewRegisteration newStudentRegisteration = new NewRegisteration();	
 
+	 NewRegisteration newStudentRegisteration1 = new NewRegisteration();
 	public static void main (String args[]) {
 
 		boolean quit= false;
-		Main.menuOption();
+		menuOption();
 
 
 
@@ -22,7 +23,7 @@ public class Main {
 
 			switch (choice) {
 			case 1:
-				Student student = Main.scanStudentData();
+				Student student = scanStudentData();
 				newStudentRegisteration.addNewStudent(student);
 
 				break;
@@ -38,7 +39,7 @@ public class Main {
 				System.out.println("Enter Registeration Number of student who you want to Search");
 				String regNumber1 = scanner.next();
 				if(!newStudentRegisteration.printStudnet(regNumber1)) {
-					System.out.println("Student not found with reg no. " + regNumber1);
+					System.out.println("Student not found with registeration no. " + regNumber1);
 				}
 
 				break;		
